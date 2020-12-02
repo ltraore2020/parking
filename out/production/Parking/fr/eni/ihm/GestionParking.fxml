@@ -3,13 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="365.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.eni.ihm.controller.GestionParkingController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.eni.ihm.controller.GestionParkingController">
    <children>
       <Label fx:id="test" layoutX="60.0" layoutY="42.0" text="Label" />
-      <TableView layoutX="280.0" layoutY="42.0" prefHeight="166.0" prefWidth="186.0">
+      <TableView fx:id="tablePersonne" layoutX="365.0" layoutY="42.0" prefHeight="166.0" prefWidth="186.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Nom" />
-          <TableColumn prefWidth="75.0" text="Prénom" />
+          <TableColumn fx:id="colNom" prefWidth="75.0" text="Nom" />
+          <TableColumn fx:id="colPrenom" prefWidth="75.0" text="Prenom" />
         </columns>
       </TableView>
    </children>

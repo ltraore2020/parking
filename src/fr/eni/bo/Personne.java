@@ -7,7 +7,8 @@ public class Personne {
 
     public Personne(){}
 
-    public Personne(String nom, String prenom){
+    public Personne(int id, String nom, String prenom){
+        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
     }
