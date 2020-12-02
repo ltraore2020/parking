@@ -4,11 +4,12 @@ import java.sql.Connection;
 
 public class ParkingDal {
 
-    public static void test(){
+    public static String test(){
         try(Connection connection = Utils.getConnection()){
-            System.out.println("Connection établie");
+            return "connection établie";
         } catch (Exception e) {
             e.printStackTrace();
+            return "default";
         }
     }
 }
