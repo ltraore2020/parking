@@ -1,6 +1,7 @@
 package fr.eni.ihm.controller;
 
-import fr.eni.dal.ParkingDal;
+import fr.eni.bll.PersonneBll;
+import fr.eni.bo.Personne;
 import javafx.scene.control.Label;
 
 public class GestionParkingController {
@@ -9,8 +10,9 @@ public class GestionParkingController {
 
     public void initialize(){
         try {
+            Personne personne = PersonneBll.get(1);
 
-            test.setText(ParkingDal.test());
+            test.setText(personne.getNom());
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -16,12 +16,5 @@ SELECT * FROM fn_my_permissions(NULL, 'SERVER');
 REVERT;
 
 
-------------     CREATE DATABASE     -------------------------------------
 
-CREATE DATABASE parking;
 
-CREATE TABLE test (
-	id int
-);
-
-DROP TABLE test;

@@ -1,6 +1,5 @@
 package fr.eni.ihm;
 
-import fr.eni.dal.ParkingDal;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
