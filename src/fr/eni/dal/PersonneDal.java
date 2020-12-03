@@ -12,8 +12,10 @@ import java.util.logging.Logger;
 public class PersonneDal {
 
     private static final String INSERT = "INSERT INTO Personnes VALUES (?, ?)";
+    private static final String UPDATE = "UPDATE Personnes SET nom = ?, prenom = ? WHERE idPersonne = ?";
     private static final String GET_BY_ID = "SELECT * FROM Personnes WHERE idPersonne = ?";
     private static final String GET_ALL = "SELECT * FROM Personnes";
+    private static final String DELETE = "DELETE FROM Personnes WHERE idPersonne = ?";
 
 //    private static Logger = null;  ------   TODO  ----------
 
@@ -73,5 +75,31 @@ public class PersonneDal {
         }
 
         return personnes;
+     }
+
+     public static boolean update(Personne personne){
+         try (Connection connection = Utils.getConnection()){
+             PreparedStatement request = connection.prepareStatement(UPDATE);
+             request.setString(1, personne.getNom());
+             request.setString(2, personne.getPrenom());
+             request.setInt(3, personne.getId());
+             return request.executeUpdate() == 0 ? false : true;
+         } catch (Exception e){
+             e.printStackTrace();
+         }
+         return false;
+     }
+
+     public static boolean delete(Personne personne){
+         try (Connection connection = Utils.getConnection()){
+             PreparedStatement request = connection.prepareStatement(DELETE);
+             request.setInt(1, personne.getId());
+//             request.setString(1, personne.getNom());
+//             request.setString(2, personne.getPrenom());
+             return request.executeUpdate() == 0 ? false : true;
+         } catch (Exception e){
+             e.printStackTrace();
+         }
+        return false;
      }
 }

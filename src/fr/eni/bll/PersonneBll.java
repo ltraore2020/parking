@@ -13,4 +13,8 @@ public class PersonneBll {
 
     public static boolean insert(Personne personne){ return PersonneDal.insert(personne); }
 
+    public static boolean delete(Personne personne){ return PersonneDal.delete(personne); }
+
+    public static boolean update(Personne personne){ return PersonneDal.update(personne); }
+
 }
