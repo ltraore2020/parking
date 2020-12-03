@@ -16,8 +16,8 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
 //        String myConnection = ParkingDal.test();
         Parent root = FXMLLoader.load( getClass().getResource("GestionParking.fxml") );
-        stage.setTitle("Hola");
-        stage.setScene( new Scene(root, 800, 400));
+        stage.setTitle("Gestion Parking");
+        stage.setScene( new Scene(root, 600, 400));
         stage.show();
     }
 }

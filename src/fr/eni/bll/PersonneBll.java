@@ -11,4 +11,6 @@ public class PersonneBll {
 
     public static List<Personne> getAll(){ return PersonneDal.getAll(); }
 
+    public static boolean insert(Personne personne){ return PersonneDal.insert(personne); }
+
 }

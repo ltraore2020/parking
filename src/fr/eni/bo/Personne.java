@@ -7,10 +7,14 @@ public class Personne {
 
     public Personne(){}
 
-    public Personne(int id, String nom, String prenom){
-        this.id = id;
+    public Personne(String nom, String prenom) {
         this.nom = nom;
         this.prenom = prenom;
+    }
+
+    public Personne(int id, String nom, String prenom){
+        this(nom, prenom);
+        this.id = id;
     }
 
     public int getId() { return id; }

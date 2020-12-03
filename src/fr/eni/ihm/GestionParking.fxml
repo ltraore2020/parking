@@ -5,12 +5,18 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.eni.ihm.controller.GestionParkingController">
    <children>
-      <Label fx:id="test" layoutX="60.0" layoutY="42.0" text="Label" />
-      <TableView fx:id="tablePersonne" layoutX="365.0" layoutY="42.0" prefHeight="166.0" prefWidth="186.0">
+      <TableView fx:id="tablePersonne" layoutX="373.0" layoutY="14.0" prefHeight="166.0" prefWidth="214.0">
         <columns>
           <TableColumn fx:id="colNom" prefWidth="75.0" text="Nom" />
           <TableColumn fx:id="colPrenom" prefWidth="75.0" text="Prenom" />
         </columns>
       </TableView>
+      <Label layoutX="373.0" layoutY="200.0" text="Nom :" />
+      <Label layoutX="373.0" layoutY="235.0" text="Prénom : " />
+      <Button layoutX="373.0" layoutY="276.0" mnemonicParsing="false" text="Ajouter" onAction="#addPerson" />
+      <Button layoutX="440.0" layoutY="276.0" mnemonicParsing="false" text="Modifier" />
+      <Button layoutX="516.0" layoutY="276.0" mnemonicParsing="false" text="Supprimer" />
+      <TextField fx:id="tfNom" layoutX="433.0" layoutY="196.0" />
+      <TextField fx:id="tfPrenom" layoutX="433.0" layoutY="231.0" />
    </children>
 </AnchorPane>
